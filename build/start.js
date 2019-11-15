@@ -65,6 +65,7 @@ checkBrowsers(paths.appPath, isInteractive)
         const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
         const appName = require(paths.appPackageJson).name;                 //获取package.json的name值
         const useTypeScript = fs.existsSync(paths.appTsConfig);             //判断tsconfig文件是否存在， 决定是否使用ts
+        const tscCompileOnError = process.env.TSC_COMPILE_ON_ERROR === 'true';
         const urls = prepareUrls(protocol, HOST, port);
         const devSocket = {
             warnings: warnings =>
@@ -79,6 +80,7 @@ checkBrowsers(paths.appPath, isInteractive)
             urls,
             useYarn,
             useTypeScript,
+            tscCompileOnError,
             webpack,
         });
         const proxySetting = require(paths.appPackageJson).proxy;           //获取package.json的proxy相关信息

@@ -1,13 +1,72 @@
+// {
+//     "compilerOptions": {
+//         "outDir": "./dist/",
+//         "sourceMap": true,
+//         "noImplicitAny": false,
+//         "module": "commonjs",
+//         "target": "es5",
+//         "jsx": "react",
+//     },
+//     "include": [
+//         "./src/**/*"
+//     ],
+// }
+// {
+//     "compilerOptions": {
+//         "baseUrl": "src",
+//         "outDir": "./dist/",
+//         "module": "esnext",
+//         "target": "es5",
+//         "lib": [
+//             "esnext",
+//             "dom"
+//         ],
+//         "sourceMap": true,
+//         "allowJs": true,
+//         "jsx": "react",
+//         "moduleResolution": "node",
+//         "rootDir": ".",
+//         "forceConsistentCasingInFileNames": true,
+//         "noImplicitReturns": true,
+//         "noImplicitThis": true,
+//         "noImplicitAny": false,
+//         "noUnusedLocals": true,
+//         "noUnusedParameters": true,
+//         "strictNullChecks": true,
+//         "importHelpers": true,
+//         "suppressImplicitAnyIndexErrors": true,
+//         "experimentalDecorators": true,
+//         "downlevelIteration": true,
+//         "allowSyntheticDefaultImports": true,
+//         "paths": {
+//             "@/*": [
+//                 "src/*"
+//             ]
+//         }
+//     },
+//     "exclude": [
+//         "node_modules",
+//         "dist",
+//         "build",
+//         "mock"
+//     ]
+// }
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": false,
-        "module": "commonjs",
-        "target": "es5",
-        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "module": "esnext",
+        "target": "esnext",
+        "moduleResolution": "node",
+        "jsx": "react"
     },
     "include": [
-        "./src/**/*"
+        "src"
     ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build",
+        "mock"
+    ]
 }
